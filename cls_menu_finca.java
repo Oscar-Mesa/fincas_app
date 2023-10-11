@@ -21,6 +21,10 @@ public class cls_menu_finca{
 
 
     cls_menu_finca(){
+        fnt_menu();
+    }
+
+    public void fnt_menu(){
         int menu = Integer.parseInt(JOptionPane.showInputDialog(null,"<< MENU FINCA >> \n 1. Registrar \n2. Actualizar \n3. Consultar"));
         
         if(menu == 1){
@@ -40,5 +44,9 @@ public class cls_menu_finca{
 
         fincasArray[int_posicion] = new cls_fincas(str_nombre, str_codigo, str_direccion,str_extension,str_propietario, str_ubicacion, str_prom_produccion, str_act_economica);
         int_posicion += 1;
+
+        JOptionPane.showMessageDialog(null, "Finca registrada con exito");
+        fnt_menu();
+        
     }
 }
